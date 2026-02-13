@@ -82,6 +82,58 @@ const imageCredits: Record<string, ImageCreditEntry> = {
     notes: "Cropped from original",
   },
 
+  brighton: {
+    title: "Amex Stadium, Brighton",
+    authorName: "Hassocks5489",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Hassocks5489",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:American_Express_Community_Stadium_on_09-08-2011_(BHAFC_v_Gillingham,_League_Cup_First_Round)_(10).JPG",
+    licenseName: "CC0 1.0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    modified: true,
+    notes: "Cropped from original",
+  },
+
+  burnley: {
+    title: "Turf Moor, Burnley",
+    authorName: "Colin Smith",
+    authorUrl: "https://www.geograph.org.uk/profile/3972",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Burnley_F.C._-_Turf_Moor_-_geograph.org.uk_-_7284628.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: true,
+    notes: "Cropped from original",
+  },
+
+  chelsea: {
+    title: "Stamford Bridge, London",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:London_Stamford_Bridge.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: true,
+    notes: "Cropped from original",
+  },
+
+  crystal_palace: {
+    title: "Selhurst Park, London",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:London_Selhurst_Park_crystal_palace_stadium_aerialview.JPG",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: true,
+    notes: "Cropped from original",
+  },
+
   // ─── Championship ────────────────────────────────────────────
 
   // ─── League One ──────────────────────────────────────────────

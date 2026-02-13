@@ -6,7 +6,7 @@
   { "id": "brighton", "club": "Brighton & Hove Albion", "stadium": "Amex Stadium", "league": "PL", "city": "Brighton", "capacity": 31876, "opened": 2011, "lat": 50.8616, "lng": -0.0837, "stickerImage": "/stickers/brighton.webp" },
   { "id": "burnley", "club": "Burnley", "stadium": "Turf Moor", "league": "PL", "city": "Burnley", "capacity": 21944, "opened": 1883, "lat": 53.7893, "lng": -2.2302, "stickerImage": "/stickers/burnley.webp" },
   { "id": "chelsea", "club": "Chelsea", "stadium": "Stamford Bridge", "league": "PL", "city": "London", "capacity": 41312, "opened": 1877, "lat": 51.4817, "lng": -0.191, "stickerImage": "/stickers/chelsea.webp" },
-  { "id": "crystal-palace", "club": "Crystal Palace", "stadium": "Selhurst Park", "league": "PL", "city": "London", "capacity": 25486, "opened": 1924, "lat": 51.3983, "lng": -0.0855, "stickerImage": "/stickers/crystal-palace.webp" },
+  { "id": "crystal_palace", "club": "Crystal Palace", "stadium": "Selhurst Park", "league": "PL", "city": "London", "capacity": 25486, "opened": 1924, "lat": 51.3983, "lng": -0.0855, "stickerImage": "/stickers/crystal_palace.webp" },
   { "id": "everton", "club": "Everton", "stadium": "Goodison Park", "league": "PL", "city": "Liverpool", "capacity": 39414, "opened": 1892, "lat": 53.4389, "lng": -2.9664, "stickerImage": "/stickers/everton.webp" },
   { "id": "fulham", "club": "Fulham", "stadium": "Craven Cottage", "league": "PL", "city": "London", "capacity": 28800, "opened": 1896, "lat": 51.4749, "lng": -0.2217, "stickerImage": "/stickers/fulham.webp" },
   { "id": "leeds", "club": "Leeds United", "stadium": "Elland Road", "league": "PL", "city": "Leeds", "capacity": 37645, "opened": 1897, "lat": 53.7779, "lng": -1.5722, "stickerImage": "/stickers/leeds.webp" },

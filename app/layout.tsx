@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Russo_One, Inter } from "next/font/google";
 import Link from "next/link";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const russoOne = Russo_One({
@@ -53,6 +54,7 @@ export default function RootLayout({
         <footer className="merlin-footer">
           CollectThe92 – A fan project. Not affiliated with any football league or club.
         </footer>
+        <SpeedInsights />
       </body>
     </html>
   );

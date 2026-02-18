@@ -39,7 +39,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:London_Emirates_Stadium_arsenal.jpg",
     licenseName: "CC BY-SA 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -52,7 +52,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:Birmingham_aston_villa_park_stadium.jpg",
     licenseName: "CC BY-SA 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -65,7 +65,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:East_Stand_-_Vitality_Stadium_-_geograph.org.uk_-_7604192.jpg",
     licenseName: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -78,7 +78,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:Brentford_Community_Stadium_2020.jpg",
     licenseName: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -91,7 +91,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:American_Express_Community_Stadium_on_09-08-2011_(BHAFC_v_Gillingham,_League_Cup_First_Round)_(10).JPG",
     licenseName: "CC0 1.0",
     licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -104,7 +104,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:Burnley_F.C._-_Turf_Moor_-_geograph.org.uk_-_7284628.jpg",
     licenseName: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -117,7 +117,7 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:London_Stamford_Bridge.jpg",
     licenseName: "CC BY-SA 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
-    modified: true,
+    modified: false,
     notes: "Cropped from original",
   },
 
@@ -130,7 +130,163 @@ const imageCredits: Record<string, ImageCreditEntry> = {
       "https://commons.wikimedia.org/wiki/File:London_Selhurst_Park_crystal_palace_stadium_aerialview.JPG",
     licenseName: "CC BY-SA 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
-    modified: true,
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  everton: {
+    title: "Hill Dickinson Stadium, Liverpool",
+    authorName: "Austinobobbino",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:Austi%C3%B1obobbi%C3%B1o&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Interior_of_Hill_Dickinson_Stadium.jpg",
+    licenseName: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  fulham: {
+    title: "Craven Cottage, London",
+    authorName: "Kenneth Yarham",
+    authorUrl: "https://www.geograph.org.uk/profile/25226",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Craven_Cottage_Football_Ground_-_geograph.org.uk_-_778731.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  leeds: {
+    title: "Elland Road, Leeds",
+    authorName: "Stephen Armstrong",
+    authorUrl: "https://www.geograph.org.uk/profile/1810",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Elland_Road_East_Stand_(geograph_5923678).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  liverpool: {
+    title: "Anfield, Liverpool",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Liverpool_anfield_road_stadium.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  man_city: {
+    title: "Etihad Stadium, Manchester",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/2/27/City_of_Manchester_Stadium_2023_cropped.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  man_utd: {
+    title: "Old Trafford, Manchester",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:2023_07_31_arne_mueseler_00060-Verbessert-RR_(53106651455).jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  newcastle: {
+    title: "St James' Park, Newcastle",
+    authorName: "Ian Paterson",
+    authorUrl: "https://www.geograph.org.uk/profile/13639",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:St_James%27_Park_from_the_Sandman_Signature_hotel,_18_April_2012.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  nottm_forest: {
+    title: "City Ground, Nottingham",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/Category:City_Ground,_Nottingham#/media/File:Nottingham_the_city_ground_stadium_forest.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  sunderland: {
+    title: "Stadium of Light, Sunderland",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Sunderland_Stadium_of_Light_aerial.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  tottenham: {
+    title: "Tottenham Hotspur Stadium, London",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/Category:Tottenham_Hotspur_Stadium#/media/File:London_Tottenham_Hotspur_Stadium.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  west_ham: {
+    title: "London Stadium London",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:London_Olympic_Stadium_West_Ham.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  wolves: {
+    title: "Molineux Stadium, Wolverhampton",
+    authorName: "Bex Walton",
+    authorUrl: "https://www.flickr.com/photos/7831824@N04/54726219571/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Back_in_position_in_the_Billy_Wright_stand_-_54726219571.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/deed.en",
+    modified: false,
     notes: "Cropped from original",
   },
 

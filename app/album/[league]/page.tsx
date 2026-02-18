@@ -12,9 +12,11 @@ import {
   type League,
 } from "@/lib/types";
 import AlbumSpread from "@/components/AlbumSpread";
+import MobileAlbumView from "@/components/MobileAlbumView";
 import ProgressBar from "@/components/ProgressBar";
 import Plaque from "@/components/ui/Plaque";
 import TabStrip from "@/components/ui/TabStrip";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function AlbumPage() {
   const params = useParams();
@@ -24,7 +26,8 @@ export default function AlbumPage() {
   const league = isValidLeague ? leagueParam : "PL";
   const meta = LEAGUE_META[league];
 
-  const { isVisited, toggleVisited, visitedCountByLeague } = useAlbumProgress();
+  const { isVisited, toggleVisited, getFixtures, addFixture, removeFixture, visitedCountByLeague } = useAlbumProgress();
+  const isMobile = useIsMobile();
 
   const stadiums = useMemo(() => stadiumsByLeague(league), [league]);
   const totalSpreads = Math.ceil(stadiums.length / SLOTS_PER_SPREAD);
@@ -153,69 +156,86 @@ export default function AlbumPage() {
           }))}
         />
 
-        <div className="flex items-center gap-1.5">
-          <button
-            onClick={() =>
-              setCurrentSpread((p) => Math.max(0, p - 1), "left")
-            }
-            disabled={currentSpread <= 0}
-            className="spread-nav-btn"
-            aria-label="Previous spread"
-          >
-            ◀
-          </button>
-          <select
-            value={currentSpread}
-            onChange={(e) => {
-              const next = Number(e.target.value);
-              setCurrentSpread(
-                next,
-                next > currentSpread ? "right" : next < currentSpread ? "left" : undefined
-              );
-            }}
-            className="spread-nav-select"
-            aria-label="Jump to spread"
-          >
-            {Array.from({ length: totalSpreads }, (_, i) => (
-              <option key={i} value={i}>
-                Spread {i + 1} / {totalSpreads}
-              </option>
-            ))}
-          </select>
-          <button
-            onClick={() =>
-              setCurrentSpread(
-                (p) => Math.min(totalSpreads - 1, p + 1),
-                "right"
-              )
-            }
-            disabled={currentSpread >= totalSpreads - 1}
-            className="spread-nav-btn"
-            aria-label="Next spread"
-          >
-            ▶
-          </button>
-        </div>
+        {!isMobile && (
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() =>
+                setCurrentSpread((p) => Math.max(0, p - 1), "left")
+              }
+              disabled={currentSpread <= 0}
+              className="spread-nav-btn"
+              aria-label="Previous spread"
+            >
+              ◀
+            </button>
+            <select
+              value={currentSpread}
+              onChange={(e) => {
+                const next = Number(e.target.value);
+                setCurrentSpread(
+                  next,
+                  next > currentSpread ? "right" : next < currentSpread ? "left" : undefined
+                );
+              }}
+              className="spread-nav-select"
+              aria-label="Jump to spread"
+            >
+              {Array.from({ length: totalSpreads }, (_, i) => (
+                <option key={i} value={i}>
+                  Spread {i + 1} / {totalSpreads}
+                </option>
+              ))}
+            </select>
+            <button
+              onClick={() =>
+                setCurrentSpread(
+                  (p) => Math.min(totalSpreads - 1, p + 1),
+                  "right"
+                )
+              }
+              disabled={currentSpread >= totalSpreads - 1}
+              className="spread-nav-btn"
+              aria-label="Next spread"
+            >
+              ▶
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* ===== ALBUM SPREAD – fills remaining viewport height ===== */}
-      <div className="flex-1 min-h-0 album-spread-viewport" style={{ perspective: "1400px" }}>
-        <div
-          key={`${league}-${currentSpread}`}
-          className={`w-full h-full min-h-0 ${pageTurnDirection === "right" ? "animate-page-turn-right" : pageTurnDirection === "left" ? "animate-page-turn-left" : "animate-page-flip"}`}
-        >
-            <AlbumSpread
-            stadiums={spreadStadiums}
-            startIndex={currentSpread * SLOTS_PER_SPREAD}
-            league={league}
-            spreadNumber={currentSpread}
+      {isMobile ? (
+        <div className="flex-1 min-h-0 overflow-y-auto">
+          <MobileAlbumView
+            stadiums={stadiums}
             isVisited={isVisited}
             onToggle={handleToggle}
-            visitedCount={visited}
-            totalCount={meta.total}
+            getFixtures={getFixtures}
+            onAddFixture={addFixture}
+            onRemoveFixture={removeFixture}
           />
         </div>
-      </div>
+      ) : (
+        <div className="flex-1 min-h-0 album-spread-viewport" style={{ perspective: "1400px" }}>
+          <div
+            key={`${league}-${currentSpread}`}
+            className={`w-full h-full min-h-0 ${pageTurnDirection === "right" ? "animate-page-turn-right" : pageTurnDirection === "left" ? "animate-page-turn-left" : "animate-page-flip"}`}
+          >
+            <AlbumSpread
+              stadiums={spreadStadiums}
+              startIndex={currentSpread * SLOTS_PER_SPREAD}
+              league={league}
+              spreadNumber={currentSpread}
+              isVisited={isVisited}
+              onToggle={handleToggle}
+              getFixtures={getFixtures}
+              onAddFixture={addFixture}
+              onRemoveFixture={removeFixture}
+              visitedCount={visited}
+              totalCount={meta.total}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

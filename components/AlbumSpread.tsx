@@ -1,6 +1,6 @@
 "use client";
 
-import type { Stadium, League } from "@/lib/types";
+import type { Stadium, League, FixtureInfo } from "@/lib/types";
 import { SLOTS_PER_PAGE, LEAGUE_META } from "@/lib/types";
 import Page from "./Page";
 import StickerSlot from "./StickerSlot";
@@ -14,6 +14,9 @@ interface AlbumSpreadProps {
   totalCount: number;
   isVisited: (id: string) => boolean;
   onToggle: (id: string) => void;
+  getFixtures: (stadiumId: string) => FixtureInfo[];
+  onAddFixture: (stadiumId: string, fixture: FixtureInfo) => void;
+  onRemoveFixture: (stadiumId: string, fixtureId: string) => void;
 }
 
 export default function AlbumSpread({
@@ -25,6 +28,9 @@ export default function AlbumSpread({
   totalCount,
   isVisited,
   onToggle,
+  getFixtures,
+  onAddFixture,
+  onRemoveFixture,
 }: AlbumSpreadProps) {
   const meta = LEAGUE_META[league];
   const leftPage = stadiums.slice(0, SLOTS_PER_PAGE);
@@ -39,6 +45,9 @@ export default function AlbumSpread({
           slotNumber={startIndex + offset + i + 1}
           visited={isVisited(stadium.id)}
           onToggle={() => onToggle(stadium.id)}
+          fixtures={getFixtures(stadium.id)}
+          onAddFixture={(fixture) => onAddFixture(stadium.id, fixture)}
+          onRemoveFixture={(fixtureId) => onRemoveFixture(stadium.id, fixtureId)}
         />
       ))}
       {/* Decorative "special" slots for partial pages */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import type { Stadium } from "@/lib/types";
+import type { Stadium, FixtureInfo } from "@/lib/types";
 import { formatImageCredit, hasImageCreditDetails } from "@/lib/imageCredits";
 import StickerCard from "./StickerCard";
 import StadiumModal from "./StadiumModal";
@@ -12,6 +12,9 @@ interface StickerSlotProps {
   slotNumber: number;
   visited: boolean;
   onToggle: () => void;
+  fixtures: FixtureInfo[];
+  onAddFixture: (fixture: FixtureInfo) => void;
+  onRemoveFixture: (fixtureId: string) => void;
 }
 
 export default function StickerSlot({
@@ -19,6 +22,9 @@ export default function StickerSlot({
   slotNumber,
   visited,
   onToggle,
+  fixtures,
+  onAddFixture,
+  onRemoveFixture,
 }: StickerSlotProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const [justPlaced, setJustPlaced] = useState(false);
@@ -143,6 +149,9 @@ export default function StickerSlot({
           isVisited={visited}
           onToggle={handleToggle}
           onClose={() => setModalOpen(false)}
+          fixtures={fixtures}
+          onAddFixture={onAddFixture}
+          onRemoveFixture={onRemoveFixture}
         />
       )}
     </>

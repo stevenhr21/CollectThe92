@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Russo_One, Inter } from "next/font/google";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
 const russoOne = Russo_One({
@@ -34,7 +35,7 @@ export default function RootLayout({
             <Link href="/" className="nav-logo">
               CollectThe92
             </Link>
-            <div className="flex gap-5 text-sm">
+            <div className="hidden md:flex gap-5 text-sm">
               <Link href="/about" className="nav-link">
                 About
               </Link>
@@ -45,6 +46,7 @@ export default function RootLayout({
                 Badges
               </Link>
             </div>
+            <MobileNav />
           </div>
         </nav>
 

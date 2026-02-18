@@ -34,11 +34,38 @@ export interface Stadium {
   notes?: string;
 }
 
+export interface FixtureInfo {
+  id: string;
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+  competition: string;
+  homeScore?: number;
+  awayScore?: number;
+  notes?: string;
+}
+
 export interface AlbumProgress {
   version: 1;
   visited: Record<string, boolean>;
+  fixtures?: Record<string, FixtureInfo[]>;
   updatedAt: string;
 }
+
+export const COMPETITIONS = [
+  "Premier League",
+  "Championship",
+  "League One",
+  "League Two",
+  "FA Cup",
+  "League Cup",
+  "EFL Trophy",
+  "Championship Play-offs",
+  "League One Play-offs",
+  "League Two Play-offs",
+  "Friendly",
+  "Other",
+] as const;
 
 export const LEAGUE_META: Record<
   League,

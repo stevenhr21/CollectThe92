@@ -291,6 +291,31 @@ const imageCredits: Record<string, ImageCreditEntry> = {
   },
 
   // ─── Championship ────────────────────────────────────────────
+  birmingham: {
+    title: "St Andrew's, Birmingham",
+    authorName: "Bruker:TuborgLight",
+    authorUrl: "https://no.wikipedia.org/wiki/Bruker:TuborgLight",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:TiltonRoadEnd01.JPG",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  blackburn: {
+    title: "Ewood Park, Blackburn",
+    authorName: "Ronnie Macdonald",
+    authorUrl: "https://www.flickr.com/people/7332125@N04",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Ewood_Park_2011.jpg",
+    licenseName: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
 
   // ─── League One ──────────────────────────────────────────────
 

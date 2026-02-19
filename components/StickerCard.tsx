@@ -58,7 +58,7 @@ export default function StickerCard({ stadium, justPlaced }: StickerCardProps) {
           variant="thumb"
           showAttributionLine={false}
           wrapperClassName="absolute inset-0"
-          imageClassName="absolute inset-0 w-full h-full object-cover"
+          imageClassName="object-cover"
         />
 
         {/* Photo vignette */}

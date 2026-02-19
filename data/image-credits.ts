@@ -317,9 +317,99 @@ const imageCredits: Record<string, ImageCreditEntry> = {
     notes: "Cropped from original",
   },
 
+  bristol_city: {
+    title: "Ashton Gate, Bristol",
+    authorName: "SGGH",
+    authorUrl: "https://en.wikipedia.org/wiki/User:SGGH",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Ashton_Gate_Stadium_(daytime).jpg",
+    licenseName: "CC BY 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  coventry: {
+    title: "Coventry Building Society Arena, Coventry",
+    authorName: "Amakuru",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Amakuru",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Coventry_Derby_October_2021_-_2.jpg",
+    licenseName: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  derby: {
+    title: "Pride Park Stadium, Derby",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Pride_Park_Stadium_from_the_north_west.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  hull: {
+    title: "MKM Stadium, Hull",
+    authorName: "Paul",
+    authorUrl: "https://commons.wikimedia.org/wiki/File:KC_North_Stand.JPG",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:KC_North_Stand.JPG",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  ipswich: {
+    title: "Portman Road, Ipswich",
+    authorName: "Andrew Dunn",
+    authorUrl: "http://www.andrewdunnphoto.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Cobbold_Stand,_Ipswich_Town_Football_Club_8418.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  leicester: {
+    title: "King Power Stadium, Leicester",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:King_Power_Stadium_2023_cropped.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
   // ─── League One ──────────────────────────────────────────────
 
   // ─── League Two ──────────────────────────────────────────────
+  bromley: {
+    title: "Hayes Lane, Bromley",
+    authorName: "Martin Addison",
+    authorUrl: "https://www.geograph.org.uk/profile/4942",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Hayes_Lane_Stadium_(geograph_3359000).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
 };
 
 export default imageCredits;

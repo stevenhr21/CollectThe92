@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import { formatImageCredit, hasImageCreditDetails } from "@/lib/imageCredits";
 import type { ImageCredit } from "@/lib/types";
 
@@ -12,6 +13,7 @@ interface ImageWithAttributionProps {
   showAttributionLine?: boolean;
   imageClassName?: string;
   wrapperClassName?: string;
+  sizes?: string;
 }
 
 export default function ImageWithAttribution({
@@ -22,6 +24,7 @@ export default function ImageWithAttribution({
   showAttributionLine = true,
   imageClassName,
   wrapperClassName,
+  sizes = "(max-width: 640px) 70vw, 25vw",
 }: ImageWithAttributionProps) {
   const [imgError, setImgError] = useState(false);
   const resolvedCredit = credit ?? null;
@@ -39,14 +42,15 @@ export default function ImageWithAttribution({
     process.env.NODE_ENV === "development";
 
   return (
-    <div className={wrapperClassName}>
+    <div className={wrapperClassName ?? "relative"}>
       {!imgError && (
-        /* eslint-disable-next-line @next/next/no-img-element */
-        <img
+        <Image
           src={src}
           alt={alt}
-          className={imageClassName ?? "w-full h-full object-cover"}
-          loading="lazy"
+          fill
+          sizes={sizes}
+          className={imageClassName ?? "object-cover"}
+          loading="eager"
           onError={() => setImgError(true)}
         />
       )}

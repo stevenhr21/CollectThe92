@@ -22,7 +22,7 @@
 
   { "id": "birmingham", "club": "Birmingham City", "stadium": "St Andrew's", "league": "CH", "city": "Birmingham", "capacity": 29409, "opened": 1906, "lat": 52.4756, "lng": -1.868, "stickerImage": "/stickers/birmingham.webp" },
   { "id": "blackburn", "club": "Blackburn Rovers", "stadium": "Ewood Park", "league": "CH", "city": "Blackburn", "capacity": 31367, "opened": 1890, "lat": 53.7286, "lng": -2.489, "stickerImage": "/stickers/blackburn.webp" },
-  { "id": "bristol-city", "club": "Bristol City", "stadium": "Ashton Gate", "league": "CH", "city": "Bristol", "capacity": 27000, "opened": 1904, "lat": 51.4401, "lng": -2.6208, "stickerImage": "/stickers/bristol-city.webp" },
+  { "id": "bristol_city", "club": "Bristol City", "stadium": "Ashton Gate", "league": "CH", "city": "Bristol", "capacity": 27000, "opened": 1904, "lat": 51.4401, "lng": -2.6208, "stickerImage": "/stickers/bristol_city.webp" },
   { "id": "charlton", "club": "Charlton Athletic", "stadium": "The Valley", "league": "CH", "city": "London", "capacity": 27111, "opened": 1919, "lat": 51.4865, "lng": 0.0367, "stickerImage": "/stickers/charlton.webp" },
   { "id": "coventry", "club": "Coventry City", "stadium": "Coventry Building Society Arena", "league": "CH", "city": "Coventry", "capacity": 32609, "opened": 2005, "lat": 52.4482, "lng": -1.4955, "stickerImage": "/stickers/coventry.webp" },
   { "id": "derby", "club": "Derby County", "stadium": "Pride Park Stadium", "league": "CH", "city": "Derby", "capacity": 33597, "opened": 1997, "lat": 52.9149, "lng": -1.4473, "stickerImage": "/stickers/derby.webp" },

@@ -395,6 +395,58 @@ const imageCredits: Record<string, ImageCreditEntry> = {
     notes: "Cropped from original",
   },
 
+  middlesbrough: {
+    title: "Riverside Stadium, Middlesbrough",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:King_Power_Stadium_2023_cropped.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  millwall: {
+    title: "The Den, London",
+    authorName: "Doyle of London",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Doyle_of_London",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:West_Entrance_to_the_Den.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  norwich: {
+    title: "Carrow Road, Norwich",
+    authorName: "Evelyn Simak",
+    authorUrl: "https://www.geograph.org.uk/profile/14840",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:-2018-05-18_Aviva_Community_Stand,_Carrow_Road_football_stadium,_Norwich_(1).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  oxford: {
+    title: "Kassam Stadium, Oxford",
+    authorName: "Nigel Cox",
+    authorUrl: "https://www.geograph.org.uk/profile/2798",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Kassam_Stadium,_Oxford.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
   // ─── League One ──────────────────────────────────────────────
 
   // ─── League Two ──────────────────────────────────────────────

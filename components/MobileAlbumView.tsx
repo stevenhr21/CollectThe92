@@ -5,7 +5,6 @@ import type { Stadium, FixtureInfo } from "@/lib/types";
 import StickerCard from "./StickerCard";
 import StadiumModal from "./StadiumModal";
 import FactFile from "@/components/ui/FactFile";
-import Plaque from "@/components/ui/Plaque";
 
 interface MobileAlbumViewProps {
   stadiums: Stadium[];
@@ -45,10 +44,14 @@ export default function MobileAlbumView({
     onToggle(stadium.id);
   }, [visited, onToggle, stadium.id]);
 
+  const handleMarkVisited = useCallback(() => {
+    setModalOpen(true);
+  }, []);
+
   return (
     <>
       <div className="flex flex-col gap-3 h-full min-h-0">
-        {/* Navigation row */}
+        {/* Team selector dropdown */}
         <div className="flex items-center justify-between gap-2 flex-shrink-0">
           <button
             onClick={goPrev}
@@ -59,17 +62,18 @@ export default function MobileAlbumView({
             ◀
           </button>
 
-          <div className="flex flex-col items-center gap-1">
-            <Plaque foil className="text-[10px] px-3 py-1">
-              {index + 1} / {total}
-            </Plaque>
-            <p
-              className="text-[10px] uppercase tracking-[0.12em] text-white/50 text-center truncate max-w-[200px]"
-              style={{ fontFamily: "var(--font-display), Impact, sans-serif" }}
-            >
-              {stadium.stadium}
-            </p>
-          </div>
+          <select
+            value={index}
+            onChange={(e) => setIndex(Number(e.target.value))}
+            className="mobile-team-select flex-1 min-w-0"
+            aria-label="Select team"
+          >
+            {stadiums.map((s, i) => (
+              <option key={s.id} value={i}>
+                {s.club} – {s.stadium}
+              </option>
+            ))}
+          </select>
 
           <button
             onClick={goNext}
@@ -88,14 +92,6 @@ export default function MobileAlbumView({
                      focus-visible:ring-4 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
           aria-label={`${stadium.stadium} – ${stadium.club}${visited ? " (collected)" : " (not collected)"}`}
         >
-          {/* Slot number badge */}
-          <span
-            className="absolute -top-2 -left-2 z-20 w-8 h-8 flex items-center justify-center
-                       rounded-full text-[10px] font-extrabold shadow-lg slot-number-marker"
-          >
-            {index + 1}
-          </span>
-
           <div
             className={`w-full h-full transition-all duration-500
                         ${visited ? "sticker-collected" : "sticker-uncollected"}`}
@@ -121,7 +117,7 @@ export default function MobileAlbumView({
         {/* Collect button */}
         <div className="flex-shrink-0 px-1 pb-1">
           <button
-            onClick={handleToggle}
+            onClick={visited ? () => setModalOpen(true) : handleMarkVisited}
             className={`mobile-collect-btn w-full ${
               visited ? "mobile-collect-btn-collected" : "mobile-collect-btn-uncollected"
             }`}

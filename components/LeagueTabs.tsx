@@ -12,7 +12,7 @@ interface LeagueTabsProps {
 
 export default function LeagueTabs({ visitedByLeague }: LeagueTabsProps) {
   return (
-    <div className="grid grid-cols-2 gap-2 md:grid-cols-1 md:gap-3 flex-1">
+    <div className="grid grid-cols-1 gap-2 md:gap-3 flex-1">
       {LEAGUE_ORDER.map((league) => {
         const meta = LEAGUE_META[league];
         const visited = visitedByLeague(league);
@@ -37,15 +37,6 @@ export default function LeagueTabs({ visitedByLeague }: LeagueTabsProps) {
               >
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <div className="flex items-center gap-1.5 sm:gap-2.5">
-                    <div
-                      className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white/40 keyline shrink-0"
-                      style={{
-                        background:
-                          `url(${THEME_ASSETS.leagueIcons[league]}) center / 65% no-repeat, ` +
-                          "linear-gradient(180deg, rgba(255,255,255,0.2), rgba(0,0,0,0.22))",
-                      }}
-                      aria-hidden="true"
-                    />
                     <div
                       className="text-[0.72rem] sm:text-[0.92rem] md:text-[1rem] font-extrabold tracking-tight uppercase leading-tight"
                       style={{

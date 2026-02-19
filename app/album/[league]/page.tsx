@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { useAlbumProgress } from "@/hooks/useAlbumProgress";
@@ -22,6 +22,7 @@ export default function AlbumPage() {
   const params = useParams();
   const leagueParam = (params.league as string)?.toUpperCase() as League;
 
+  const router = useRouter();
   const isValidLeague = LEAGUE_ORDER.includes(leagueParam);
   const league = isValidLeague ? leagueParam : "PL";
   const meta = LEAGUE_META[league];
@@ -142,19 +143,39 @@ export default function AlbumPage() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-1.5 flex-shrink-0">
-        <TabStrip
-          activeId={league}
-          tabs={LEAGUE_ORDER.map((l) => ({
-            id: l,
-            label: LEAGUE_META[l].name,
-            href: `/album/${l}`,
-            background: `linear-gradient(180deg, ${LEAGUE_META[l].colorLight} 0%, ${LEAGUE_META[l].color} 100%)`,
-            borderColor: "rgba(255,255,255,0.35)",
-            textColor: "#fff5df",
-            shadowColor:
-              l === league ? "rgba(0, 0, 0, 0.42)" : "rgba(0, 0, 0, 0.28)",
-          }))}
-        />
+        {isMobile ? (
+          <select
+            value={league}
+            onChange={(e) => {
+              router.push(`/album/${e.target.value}`);
+            }}
+            className="mobile-league-select"
+            aria-label="Select league"
+            style={{
+              background: `linear-gradient(180deg, ${meta.colorLight} 0%, ${meta.color} 100%)`,
+            }}
+          >
+            {LEAGUE_ORDER.map((l) => (
+              <option key={l} value={l}>
+                {LEAGUE_META[l].name}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <TabStrip
+            activeId={league}
+            tabs={LEAGUE_ORDER.map((l) => ({
+              id: l,
+              label: LEAGUE_META[l].name,
+              href: `/album/${l}`,
+              background: `linear-gradient(180deg, ${LEAGUE_META[l].colorLight} 0%, ${LEAGUE_META[l].color} 100%)`,
+              borderColor: "rgba(255,255,255,0.35)",
+              textColor: "#fff5df",
+              shadowColor:
+                l === league ? "rgba(0, 0, 0, 0.42)" : "rgba(0, 0, 0, 0.28)",
+            }))}
+          />
+        )}
 
         {!isMobile && (
           <div className="flex items-center gap-1.5">

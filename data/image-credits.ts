@@ -447,6 +447,110 @@ const imageCredits: Record<string, ImageCreditEntry> = {
     notes: "Cropped from original",
   },
 
+  portsmouth: {
+    title: "Fratton Park, Portsmouth",
+    authorName: "Tim Sheerman-Chase",
+    authorUrl: "https://www.flickr.com/photos/68932647@N00/54375452875/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Fratton_Park,_aerial.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  preston: {
+    title: "Deepdale, Preston",
+    authorName: "David Dixon",
+    authorUrl: "https://www.geograph.org.uk/profile/43729",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Preston_North_End_FC_Deepdale_Stadium_-_geograph.org.uk_-_6181831.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  qpr: {
+    title: "Loftus Road, London",
+    authorName: "Zakarie Faibis",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Randy110912",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Loftus_Road_22.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  sheff_utd: {
+    title: "Bramall Lane, Sheffield",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Sheffield_united_bramall_lane_stadium.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  sheff_wed: {
+    title: "Hillsborough, Sheffield",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Sheffield_wednesday_hillsborough_stadium.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  southampton: {
+    title: "St Mary's Stadium, Southampton",
+    authorName: "David Ingham",
+    authorUrl: "https://www.flickr.com/photos/15462727@N07",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Northam_Stand.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  stoke: {
+    title: "bet365 Stadium, Stoke-on-Trent",
+    authorName: "Gkbediako",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:Gkbediako&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bet_365_Stadium.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  swansea: {
+    title: "Swansea.com Stadium, Swansea",
+    authorName: "Jaggery",
+    authorUrl: "https://www.geograph.org.uk/profile/39302",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:West_side_of_the_Liberty_Stadium,_Swansea_-_geograph.org.uk_-_6000416.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
   // ─── League One ──────────────────────────────────────────────
 
   // ─── League Two ──────────────────────────────────────────────

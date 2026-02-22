@@ -9,7 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import type { User, AuthError } from "@supabase/supabase-js";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 interface AuthState {
   user: User | null;
@@ -34,14 +34,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    getSupabase().auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
       setLoading(false);
     });
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = getSupabase().auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
     });
 
@@ -49,21 +49,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const signUp = useCallback(async (email: string, password: string) => {
-    const { error } = await supabase.auth.signUp({ email, password });
+    const { error } = await getSupabase().auth.signUp({ email, password });
     return { error };
   }, []);
 
   const signIn = useCallback(async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await getSupabase().auth.signInWithPassword({ email, password });
     return { error };
   }, []);
 
   const signOut = useCallback(async () => {
-    await supabase.auth.signOut();
+    await getSupabase().auth.signOut();
   }, []);
 
   const deleteAccount = useCallback(async (): Promise<{ error: string | null }> => {
-    const { data: { session } } = await supabase.auth.getSession();
+    const { data: { session } } = await getSupabase().auth.getSession();
     if (!session) return { error: "No active session" };
 
     const res = await fetch("/api/account/delete", {
@@ -76,7 +76,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return { error: body.error ?? "Failed to delete account" };
     }
 
-    await supabase.auth.signOut();
+    await getSupabase().auth.signOut();
     return { error: null };
   }, []);
 

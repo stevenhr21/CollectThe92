@@ -1,5 +1,5 @@
 import type { AlbumProgress, FixtureInfo } from "./types";
-import { supabase } from "./supabase";
+import { getSupabase } from "./supabase";
 
 const STORAGE_KEY = "collect92_progress_v1";
 
@@ -38,7 +38,7 @@ export function clearLocalProgress(): void {
 // ---------------------------------------------------------------------------
 
 export async function cloudPull(userId: string): Promise<AlbumProgress | null> {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from("user_progress")
     .select("visited, fixtures, updated_at")
     .eq("id", userId)
@@ -58,7 +58,7 @@ export async function cloudPush(
   userId: string,
   progress: AlbumProgress
 ): Promise<boolean> {
-  const { error } = await supabase.from("user_progress").upsert(
+  const { error } = await getSupabase().from("user_progress").upsert(
     {
       id: userId,
       visited: progress.visited,

@@ -25,14 +25,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid session" }, { status: 401 });
   }
 
-  const supabaseAdmin = getSupabaseAdmin();
+  const admin = getSupabaseAdmin();
 
-  // Delete user progress data first (RLS would handle this, but CASCADE
-  // on the FK will also clean it up when the auth user is deleted)
-  await supabaseAdmin.from("user_progress").delete().eq("id", user.id);
+  await admin.from("user_progress").delete().eq("id", user.id);
 
-  // Delete the auth user
-  const { error: deleteError } = await supabaseAdmin.auth.admin.deleteUser(user.id);
+  const { error: deleteError } = await admin.auth.admin.deleteUser(user.id);
 
   if (deleteError) {
     return NextResponse.json(

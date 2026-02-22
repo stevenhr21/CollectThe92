@@ -38,17 +38,6 @@ export default function RootLayout({
               <Link href="/" className="nav-logo">
                 CollectThe92
               </Link>
-              <div className="hidden md:flex gap-5 text-sm items-center">
-                <Link href="/about" className="nav-link">
-                  About
-                </Link>
-                <Link href="/image-credits" className="nav-link">
-                  Image Credits
-                </Link>
-                <Link href="/badges" className="nav-link">
-                  Badges
-                </Link>
-              </div>
               <div className="flex items-center gap-3">
                 <NavAuth />
                 <MobileNav />

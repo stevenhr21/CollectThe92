@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 const NAV_LINKS = [
   { href: "/about", label: "About" },
   { href: "/image-credits", label: "Image Credits" },
-  { href: "/badges", label: "Badges" },
 ];
 
 export default function MobileNav() {
@@ -31,7 +30,7 @@ export default function MobileNav() {
   }, [open]);
 
   return (
-    <div ref={menuRef} className="md:hidden relative">
+    <div ref={menuRef} className="relative">
       <button
         onClick={() => setOpen((prev) => !prev)}
         className="mobile-menu-btn"

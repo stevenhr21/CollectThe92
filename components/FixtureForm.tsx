@@ -18,6 +18,7 @@ export default function FixtureForm({ stadiumClub, onSave, onCancel }: FixtureFo
   const [homeTeam, setHomeTeam] = useState(stadiumClub);
   const [awayTeam, setAwayTeam] = useState("");
   const [competition, setCompetition] = useState<string>(COMPETITIONS[0]);
+  const [customCompetition, setCustomCompetition] = useState("");
   const [homeScore, setHomeScore] = useState("");
   const [awayScore, setAwayScore] = useState("");
   const [notes, setNotes] = useState("");
@@ -28,7 +29,11 @@ export default function FixtureForm({ stadiumClub, onSave, onCancel }: FixtureFo
     dateRef.current?.focus();
   }, []);
 
-  const canSave = date && homeTeam.trim() && awayTeam.trim();
+  const resolvedCompetition = competition === "Other" && customCompetition.trim()
+    ? customCompetition.trim()
+    : competition;
+  const canSave = date && homeTeam.trim() && awayTeam.trim()
+    && (competition !== "Other" || customCompetition.trim());
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -39,7 +44,7 @@ export default function FixtureForm({ stadiumClub, onSave, onCancel }: FixtureFo
       date,
       homeTeam: homeTeam.trim(),
       awayTeam: awayTeam.trim(),
-      competition,
+      competition: resolvedCompetition,
       ...(homeScore !== "" && { homeScore: Number(homeScore) }),
       ...(awayScore !== "" && { awayScore: Number(awayScore) }),
       ...(notes.trim() && { notes: notes.trim() }),
@@ -84,6 +89,19 @@ export default function FixtureForm({ stadiumClub, onSave, onCancel }: FixtureFo
             <option key={c} value={c}>{c}</option>
           ))}
         </select>
+        {competition === "Other" && (
+          <input
+            id="fixture-comp-custom"
+            type="text"
+            value={customCompetition}
+            onChange={(e) => setCustomCompetition(e.target.value)}
+            className="fixture-form-input mt-1.5"
+            placeholder="Enter competition name..."
+            maxLength={100}
+            autoFocus
+            required
+          />
+        )}
       </div>
 
       {/* Teams row */}

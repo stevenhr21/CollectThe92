@@ -6,6 +6,7 @@ import NavAuth from "@/components/NavAuth";
 import { KofiNavButton } from "@/components/KofiButton";
 import KofiButton from "@/components/KofiButton";
 import Providers from "@/components/Providers";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const russoOne = Russo_One({
@@ -60,6 +61,7 @@ export default function RootLayout({
             </p>
           </footer>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

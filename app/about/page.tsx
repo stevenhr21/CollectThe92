@@ -1,4 +1,5 @@
 import Link from "next/link";
+import KofiButton from "@/components/KofiButton";
 
 export default function AboutPage() {
   return (
@@ -72,6 +73,31 @@ export default function AboutPage() {
           or connected to any football league, club, or sticker album brand. All
           stadium data is approximate and for entertainment purposes.
         </p>
+      </div>
+
+      <div
+        className="mt-8 rounded-lg border p-5 text-center space-y-3"
+        style={{
+          borderColor: "rgba(218, 165, 32, 0.2)",
+          background: "rgba(218, 165, 32, 0.04)",
+        }}
+      >
+        <h2
+          className="text-lg"
+          style={{
+            fontFamily: "var(--font-display), Impact, sans-serif",
+            textTransform: "uppercase",
+            color: "var(--gold)",
+            textShadow: "1px 1px 0 var(--gold-dark)",
+          }}
+        >
+          Support the project
+        </h2>
+        <p className="text-sm" style={{ color: "#C0B8A8" }}>
+          CollectThe92 is free and always will be. If you enjoy using it,
+          consider buying us a coffee to help keep it running.
+        </p>
+        <KofiButton variant="gold" />
       </div>
 
       <Link

@@ -90,11 +90,30 @@ body::before {
 
 .merlin-footer {
   text-align: center;
-  font-size: 0.7rem;
-  color: #6B5D4D;
-  padding: 1.5rem 1rem;
   border-top: 2px solid #3D352C;
   letter-spacing: 0.03em;
+}
+
+.footer-support {
+  padding: 1.5rem 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-support-label {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #8B7D6B;
+}
+
+.footer-disclaimer {
+  font-size: 0.7rem;
+  color: #6B5D4D;
+  padding: 0.75rem 1rem 1.5rem;
 }
 
 /* ============================================================
@@ -1146,6 +1165,13 @@ body::before {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.mobile-menu-kofi {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+}
+
 @keyframes mobile-menu-enter {
   from {
     opacity: 0;
@@ -1295,6 +1321,155 @@ body::before {
   background: #1a1714;
   color: #f7e7be;
   text-transform: none;
+}
+
+/* ============================================================
+   KO-FI SUPPORT BUTTON
+   ============================================================ */
+
+.kofi-button-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #6d4f18;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 0.75rem;
+  color: #1b150c;
+  background:
+    linear-gradient(
+      180deg,
+      #f2d88a 0%,
+      #c79c3a 40%,
+      #a67c20 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.36),
+    inset 0 -2px 2px rgba(0, 0, 0, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 215, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.15s, filter 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+
+.kofi-button-gold:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.36),
+    inset 0 -2px 2px rgba(0, 0, 0, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.15),
+    0 4px 14px rgba(218, 165, 32, 0.3);
+}
+
+.kofi-button-gold:active {
+  transform: translateY(0);
+}
+
+.kofi-button-gold:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
+.kofi-button-subtle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  padding: 0.4rem 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 0.65rem;
+  color: var(--gold);
+  background: rgba(218, 165, 32, 0.08);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.kofi-button-subtle:hover {
+  background: rgba(218, 165, 32, 0.15);
+  border-color: rgba(218, 165, 32, 0.5);
+  color: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.kofi-button-subtle:active {
+  transform: translateY(0);
+}
+
+.kofi-button-subtle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.kofi-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  background: rgba(218, 165, 32, 0.08);
+  color: var(--gold);
+  text-decoration: none;
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 0.85rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.kofi-nav-label {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .kofi-nav-label {
+    display: inline;
+  }
+}
+
+@media (max-width: 639px) {
+  .kofi-nav-button {
+    width: 38px;
+    padding: 0;
+  }
+}
+
+.kofi-nav-button:hover {
+  background: rgba(218, 165, 32, 0.15);
+  border-color: rgba(218, 165, 32, 0.5);
+  color: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.kofi-nav-button:active {
+  transform: translateY(0);
+}
+
+.kofi-nav-button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

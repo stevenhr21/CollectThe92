@@ -3,6 +3,8 @@ import { Russo_One, Inter } from "next/font/google";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
 import NavAuth from "@/components/NavAuth";
+import { KofiNavButton } from "@/components/KofiButton";
+import KofiButton from "@/components/KofiButton";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
@@ -39,6 +41,7 @@ export default function RootLayout({
                 CollectThe92
               </Link>
               <div className="flex items-center gap-3">
+                <KofiNavButton />
                 <NavAuth />
                 <MobileNav />
               </div>
@@ -48,7 +51,13 @@ export default function RootLayout({
           <main className="min-h-[calc(100dvh-52px)]">{children}</main>
 
           <footer className="merlin-footer">
-            CollectThe92 – A fan project. Not affiliated with any football league or club.
+            <div className="footer-support">
+              <span className="footer-support-label">Enjoying the album?</span>
+              <KofiButton variant="subtle" />
+            </div>
+            <p className="footer-disclaimer">
+              CollectThe92 – A fan project. Not affiliated with any football league or club.
+            </p>
           </footer>
         </Providers>
       </body>

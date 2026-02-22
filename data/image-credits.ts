@@ -546,14 +546,416 @@ const imageCredits: Record<string, ImageCreditEntry> = {
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:West_side_of_the_Liberty_Stadium,_Swansea_-_geograph.org.uk_-_6000416.jpg",
     licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  watford: {
+    title: "Vicarage Road, Watford",
+    authorName: "Jbb503",
+    authorUrl: "https://commons.wikimedia.org/wiki/File:Vicarage_Road_2015.jpg",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Vicarage_Road_2015.jpg",
+    licenseName: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
     modified: false,
     notes: "Cropped from original",
   },
 
+  west_brom: {
+    title: "The Hawthorns, West Bromwich",
+    authorName: "Jameboy",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Jameboy",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:The_Hawthorns_from_Halfords_Lane.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  wrexham: {
+    title: "Racecourse Ground, Wrexham",
+    authorName: "John Lord",
+    authorUrl: "https://www.flickr.com/people/57899800@N00",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Racecourse_Ground,_Wrexham_(49329447362).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
   // ─── League One ──────────────────────────────────────────────
+  afc_wimbledon: {
+    title: "Cherry Red Records Stadium, London",
+    authorName: "Johnlp",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Johnlp",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Plough_Lane,_18_May_2021.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  barnsley: {
+    title: "Oakwell, Barnsley",
+    authorName: "Martin Thirkettle",
+    authorUrl: "https://www.geograph.org.uk/profile/33368",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:East_Stand,_Oakwell_-_geograph.org.uk_-_1494052.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  blackpool: {
+    title: "Bloomfield Road, Blackpool",
+    authorName: "Toby Sedgwick",
+    authorUrl: "https://www.geograph.org.uk/photo/2039284",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Bloomfield_Road_PL_Kickoff-geograph-2039284.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  bolton: {
+    title: "Toughsheet Community Stadium, Bolton",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Bolton_macron_wanderers_stadium.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  bradford: {
+    title: "Valley Parade, Bradford",
+    authorName: "David Ingham",
+    authorUrl: "https://www.flickr.com/photos/15462727@N07",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Valley_Parade,_Bradford.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  burton: {
+    title: "Pirelli Stadium, Burton upon Trent",
+    authorName: "Alan Slater",
+    authorUrl: "https://www.geograph.org.uk/profile/6500",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Burton_Albion_FC,_Pirelli_Stadium,_Burton_upon_Trent,_Staffordshire_-_geograph.org.uk_-_190956.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  cardiff: {
+    title: "Cardiff City Stadium, Cardiff",
+    authorName: "Jon Candy",
+    authorUrl: "https://www.flickr.com/photos/37195744@N03",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Cardiff_City_Stadium_Pitch.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  doncaster: {
+    title: "Eco-Power Stadium, Doncaster",
+    authorName: "Richard Humphrey",
+    authorUrl: "https://www.geograph.org.uk/profile/39484",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Half_time_-_Inside_The_Keepmoat_Stadium,_Doncaster_-_geograph.org.uk_-_4388667.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  exeter: {
+    title: "St James Park, Exeter",
+    authorName: "Ze Gooner",
+    authorUrl: "https://commons.wikimedia.org/wiki/File:Adam_Stansfield_Stand.jpg",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Adam_Stansfield_Stand.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  huddersfield: {
+    title: "John Smith's Stadium, Huddersfield",
+    authorName: "Peter Turner",
+    authorUrl: "https://www.geograph.org.uk/profile/60940",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Almost_kick-off_time_at_the_Galpharm_Stadium_(geograph_2672658).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  leyton_orient: {
+    title: "Brisbane Road, London",
+    authorName: "Martin Belam",
+    authorUrl: "https://www.flickr.com/photos/51035804249@N01",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Brisbane_Road_East_Stand_-_1.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  lincoln: {
+    title: "LNER Stadium, Lincoln",
+    authorName: "DSimmonite",
+    authorUrl: "https://commons.wikimedia.org/wiki/File:LNER_Community_Stadium_(cropped).jpg",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:LNER_Community_Stadium_(cropped).jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  luton: {
+    title: "Kenilworth Road, Luton",
+    authorName: "LTFC Wellingborough",
+    authorUrl: "https://en.wikipedia.org/wiki/User:LTFC_Wellingborough",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Kenilworth_Stand_at_Kenilworth_Road,_2006.jpg",
+    licenseName: "Public Domain",
+    licenseUrl: "Public Domain",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  mansfield: {
+    title: "One Call Stadium, Mansfield",
+    authorName: "Rileyandco",
+    authorUrl: "https://commons.wikimedia.org/wiki/File:One_Call_Stadium.jpg",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:One_Call_Stadium.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  northampton: {
+    title: "Sixfields Stadium, Northampton",
+    authorName: "Bearas",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Bearas",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:2023_m._Sixfields_stadionas_Nortamptonas.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  peterborough: {
+    title: "Weston Homes Stadium, Peterborough",
+    authorName: "DBColUtd",
+    authorUrl: "https://en.wikipedia.org/wiki/User:DBColUtd",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Weston_Homes_Community_Stadium.jpg",
+    licenseName: "Public Domain",
+    licenseUrl: "Public Domain",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  plymouth: {
+    title: "Home Park, Plymouth",
+    authorName: "Lee Vilenski",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Lee_Vilenski",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Home_Park_(23705).jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  port_vale: {
+    title: "Vale Park, Stoke-on-Trent",
+    authorName: "Steve Daniels",
+    authorUrl: "https://www.geograph.org.uk/profile/35305",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Hamil_Road_Stand_in_Vale_Park_-_geograph.org.uk_-_7453732.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  reading: {
+    title: "Select Car Leasing Stadium, Reading",
+    authorName: "Richard Croft",
+    authorUrl: "https://www.geograph.org.uk/profile/1904",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Madejski_Stadium_-_geograph.org.uk_-_3023491.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  rotherham: {
+    title: "AESSEAL New York Stadium, Rotherham",
+    authorName: "Richard Humphrey",
+    authorUrl: "https://www.geograph.org.uk/profile/39484",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Inside_The_New_York_Stadium,_Rotherham_-_geograph.org.uk_-_5724957.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  stevenage: {
+    title: "Lamex Stadium, Stevenage",
+    authorName: "Peter Garner",
+    authorUrl: "https://www.geograph.org.uk/profile/39484",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:The_Lamex_Stadium,_Stevenage_-_geograph.org.uk_-_3866374.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  stockport: {
+    title: "Edgeley Park, Stockport",
+    authorName: "Ceaton89",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:Ceaton89&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:CheadleEnd2022.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  wigan: {
+    title: "Brick Community Stadium, Wigan",
+    authorName: "Jordan Reay",
+    authorUrl: "https://www.flickr.com/people/188084125@N08",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:DW_Stadium,_Wigan_(49788923253).jpg",
+    licenseName: "Public Domain",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  wycombe: {
+    title: "Adams Park, Wycombe",
+    authorName: "DipsyDave",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:DipsyDave&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:DW_Stadium,_Wigan_(49788923253).jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
 
   // ─── League Two ──────────────────────────────────────────────
+  accrington: {
+    title: "Wham Stadium, Accrington",
+    authorName: "COYB01",
+    authorUrl: "https://en.wikipedia.org/wiki/User:COYB01",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Accrington_Stanley_Crown_Ground_2019.jpeg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  barnet: {
+    title: "The Hive Stadium, Barnet",
+    authorName: "Katie Chan",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:KTC",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:London_Bees%27s_The_Hive_Stadium_(01).jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  barrow: {
+    title: "Holker Street, Barrow-in-Furness",
+    authorName: "Barrovian",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:Barrovian&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:HolkerStreet.png",
+    licenseName: "CC BY 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  bristol_rovers: {
+    title: "Memorial Stadium, Bristol",
+    authorName: "Lewis Clarke",
+    authorUrl: "https://www.geograph.org.uk/profile/11775",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Bristol_,_The_Memorial_Stadium_-_geograph.org.uk_-_4399779.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+  
   bromley: {
     title: "Hayes Lane, Bromley",
     authorName: "Martin Addison",
@@ -561,6 +963,240 @@ const imageCredits: Record<string, ImageCreditEntry> = {
     sourceName: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Hayes_Lane_Stadium_(geograph_3359000).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  cambridge: {
+    title: "Abbey Stadium, Cambridge",
+    authorName: "CU4ever",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:CU4ever&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Habbin_Stand.JPG",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  cheltenham: {
+    title: "Completely-Suzuki Stadium, Cheltenham",
+    authorName: "Steve Daniels",
+    authorUrl: "https://www.geograph.org.uk/profile/35305",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Whaddon_Road_Stadium,_Cheltenham_-_geograph.org.uk_-_1248335.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  chesterfield: {
+    title: "SMH Group Stadium, Chesterfield",
+    authorName: "Richard Croft",
+    authorUrl: "https://www.geograph.org.uk/profile/1904",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:B2net_Stadium_1_-_geograph-1998863.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  colchester: {
+    title: "JobServe Community Stadium, Colchester",
+    authorName: "Steve Daniels",
+    authorUrl: "https://www.geograph.org.uk/profile/35305",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:The_Colchester_Community_Stadium_-_geograph.org.uk_-_5553022.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  crewe: {
+    title: "Gresty Road, Crewe",
+    authorName: "Andrew Smith",
+    authorUrl: "https://www.geograph.org.uk/profile/2562",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Gresty_Road,_Crewe.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  fleetwood: {
+    title: "Highbury Stadium, Fleetwood",
+    authorName: "David Dixon",
+    authorUrl: "https://www.geograph.org.uk/profile/43729",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Fleetwood_Town_FC_Stadium_-_geograph.org.uk_-_3043855.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  gillingham: {
+    title: "Priestfield Stadium, Gillingham",
+    authorName: "David Dixon",
+    authorUrl: "https://www.geograph.org.uk/profile/43729",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Fleetwood_Town_FC_Stadium_-_geograph.org.uk_-_3043855.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  grimsby: {
+    title: "Blundell Park, Grimsby",
+    authorName: "Richard Croft",
+    authorUrl: "https://www.geograph.org.uk/profile/1904",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Blundell_Park_-_geograph.org.uk_-_125740.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  harrogate: {
+    title: "EnviroVent Stadium, Harrogate",
+    authorName: "Mark Anderson",
+    authorUrl: "https://www.geograph.org.uk/profile/760",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Harrogate_Town_AFC_(geograph_6359795).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+  
+  mk_dons: {
+    title: "Stadium MK, Milton Keynes",
+    authorName: "Steve Daniels",
+    authorUrl: "https://www.geograph.org.uk/profile/35305",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Stadium_MK_in_Milton_Keynes_-_geograph.org.uk_-_6919020.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  newport: {
+    title: "Rodney Parade, Newport",
+    authorName: "Roger Cornfoot",
+    authorUrl: "https://www.geograph.org.uk/profile/8800",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:League_2_match_at_Rodney_Parade_-_geograph.org.uk_-_7889872.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  notts_county: {
+    title: "Meadow Lane, Nottingham",
+    authorName: "Arne Museler",
+    authorUrl: "http://www.arne-mueseler.com/",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Nottingham_county_fc_notts_stadium.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  oldham: {
+    title: "Boundary Park, Oldham",
+    authorName: "Graham Hogg",
+    authorUrl: "https://www.geograph.org.uk/profile/47667",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Boundary_Park_-_geograph.org.uk_-_2729825.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  salford: {
+    title: "Peninsula Stadium, Salford",
+    authorName: "Salfordcityfc",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:Salfordcityfc&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:The_Peninsula_Stadium_-_Salford_City.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  shrewsbury: {
+    title: "Croud Meadow, Shrewsbury",
+    authorName: "Alice Humphreys",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Transatracurium",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:STFC_-_New_Meadow_(Aerial).jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  swindon: {
+    title: "County Ground, Swindon",
+    authorName: "Bearas",
+    authorUrl: "https://commons.wikimedia.org/wiki/User:Bearas",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:County_Ground_stadionas,_Svindonas_20230523_125024.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  tranmere: {
+    title: "Prenton Park, Birkenhead",
+    authorName: "Samslipknot",
+    authorUrl: "https://commons.wikimedia.org/w/index.php?title=User:Samslipknot&action=edit&redlink=1",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Prenton_Park_Panorama_1.jpg",
+    licenseName: "Public Domain",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    modified: false,
+    notes: "Cropped from original",
+  },
+
+  walsall: {
+    title: "Bescot Stadium, Walsall",
+    authorName: "Steve Daniels",
+    authorUrl: "https://www.geograph.org.uk/profile/35305",
+    sourceName: "Wikimedia Commons",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:The_Homeserve_Stand_at_the_Banks%27s_Stadium_-_geograph.org.uk_-_6346690.jpg",
     licenseName: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
     modified: false,

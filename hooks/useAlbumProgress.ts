@@ -1,50 +1,102 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import type { AlbumProgress, FixtureInfo, League } from "@/lib/types";
 import { stadiumsByLeague } from "@/lib/stadiums";
+import { useAuth } from "@/contexts/AuthContext";
+import {
+  getLocalProgress,
+  setLocalProgress,
+  clearLocalProgress,
+  cloudPull,
+  cloudPush,
+} from "@/lib/sync";
 
-const STORAGE_KEY = "collect92_progress_v1";
+const EMPTY: AlbumProgress = {
+  version: 1,
+  visited: {},
+  fixtures: {},
+  updatedAt: new Date().toISOString(),
+};
 
-function loadProgress(): AlbumProgress {
-  if (typeof window === "undefined") {
-    return { version: 1, visited: {}, fixtures: {}, updatedAt: new Date().toISOString() };
-  }
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw) as AlbumProgress;
-      if (parsed.version === 1) {
-        if (!parsed.fixtures) parsed.fixtures = {};
-        return parsed;
-      }
-    }
-  } catch {
-    // corrupted – reset
-  }
-  return { version: 1, visited: {}, fixtures: {}, updatedAt: new Date().toISOString() };
-}
-
-function saveProgress(progress: AlbumProgress) {
-  if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+function freshEmpty(): AlbumProgress {
+  return { ...EMPTY, updatedAt: new Date().toISOString() };
 }
 
 export function useAlbumProgress() {
+  const { user } = useAuth();
   const [progress, setProgress] = useState<AlbumProgress>({
-    version: 1,
-    visited: {},
-    fixtures: {},
+    ...EMPTY,
     updatedAt: "",
   });
+  const [syncing, setSyncing] = useState(false);
+  const pushTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const userIdRef = useRef<string | null>(null);
+  const prevUserIdRef = useRef<string | null | undefined>(undefined);
 
   useEffect(() => {
-    const loaded = loadProgress();
-    const frame = window.requestAnimationFrame(() => {
-      setProgress(loaded);
-    });
-    return () => window.cancelAnimationFrame(frame);
-  }, []);
+    userIdRef.current = user?.id ?? null;
+  }, [user]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const prevUserId = prevUserIdRef.current;
+    const currentUserId = user?.id ?? null;
+    prevUserIdRef.current = currentUserId;
+
+    async function init() {
+      if (!user) {
+        // Signed out: if we were previously signed in, clear the cached
+        // cloud data so the anonymous session starts fresh.
+        if (prevUserId !== undefined && prevUserId !== null) {
+          clearLocalProgress();
+          if (!cancelled) setProgress(freshEmpty());
+        } else {
+          // Initial mount or never signed in -- load local anonymous data
+          const local = getLocalProgress() ?? freshEmpty();
+          if (!cancelled) setProgress(local);
+        }
+        return;
+      }
+
+      // Signed in: load cloud data only (ignore local anonymous data)
+      setSyncing(true);
+      const cloud = await cloudPull(user.id);
+      if (cancelled) return;
+
+      const accountData = cloud ?? freshEmpty();
+      setLocalProgress(accountData);
+      setProgress(accountData);
+      setSyncing(false);
+    }
+
+    init();
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
+
+  // Debounced cloud push whenever progress changes (authed only)
+  const schedulePush = useCallback(
+    (updated: AlbumProgress) => {
+      if (pushTimerRef.current) clearTimeout(pushTimerRef.current);
+      pushTimerRef.current = setTimeout(() => {
+        const uid = userIdRef.current;
+        if (uid) {
+          cloudPush(uid, updated);
+        }
+      }, 1000);
+    },
+    []
+  );
+
+  const persist = useCallback(
+    (updated: AlbumProgress) => {
+      setLocalProgress(updated);
+      if (userIdRef.current) schedulePush(updated);
+    },
+    [schedulePush]
+  );
 
   const isVisited = useCallback(
     (id: string) => !!progress.visited[id],
@@ -67,10 +119,10 @@ export function useAlbumProgress() {
         fixtures: nextFixtures,
         updatedAt: new Date().toISOString(),
       };
-      saveProgress(updated);
+      persist(updated);
       return updated;
     });
-  }, []);
+  }, [persist]);
 
   const getFixtures = useCallback(
     (stadiumId: string): FixtureInfo[] => {
@@ -90,10 +142,10 @@ export function useAlbumProgress() {
         },
         updatedAt: new Date().toISOString(),
       };
-      saveProgress(updated);
+      persist(updated);
       return updated;
     });
-  }, []);
+  }, [persist]);
 
   const removeFixture = useCallback((stadiumId: string, fixtureId: string) => {
     setProgress((prev) => {
@@ -107,10 +159,10 @@ export function useAlbumProgress() {
         },
         updatedAt: new Date().toISOString(),
       };
-      saveProgress(updated);
+      persist(updated);
       return updated;
     });
-  }, []);
+  }, [persist]);
 
   const visitedCountByLeague = useCallback(
     (league: League) => {
@@ -131,12 +183,13 @@ export function useAlbumProgress() {
       fixtures: {},
       updatedAt: new Date().toISOString(),
     };
-    saveProgress(empty);
+    persist(empty);
     setProgress(empty);
-  }, []);
+  }, [persist]);
 
   return {
     progress,
+    syncing,
     isVisited,
     toggleVisited,
     getFixtures,

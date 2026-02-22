@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import { supabaseAdmin } from "@/lib/supabase-admin";
+import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
 export async function POST(request: Request) {
   const authHeader = request.headers.get("authorization");
@@ -24,6 +24,8 @@ export async function POST(request: Request) {
   if (userError || !user) {
     return NextResponse.json({ error: "Invalid session" }, { status: 401 });
   }
+
+  const supabaseAdmin = getSupabaseAdmin();
 
   // Delete user progress data first (RLS would handle this, but CASCADE
   // on the FK will also clean it up when the auth user is deleted)

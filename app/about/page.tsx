@@ -37,7 +37,7 @@ export default function AboutPage() {
           <li>Browse leagues: Premier League, Championship, League One, League Two</li>
           <li>Click on any sticker slot to see stadium details</li>
           <li>Mark stadiums as visited to &ldquo;place the sticker&rdquo;</li>
-          <li>Your progress is saved automatically in your browser (localStorage)</li>
+          <li>Track your progress across all 92 grounds</li>
         </ul>
 
         <h2
@@ -49,13 +49,33 @@ export default function AboutPage() {
             textShadow: "1px 1px 0 var(--gold-dark)",
           }}
         >
-          Data storage
+          Accounts, syncing and local mode
         </h2>
         <p>
-          All progress is stored locally in your browser. Nothing is sent to any
-          server. If you clear your browser data, your progress will be lost – so
-          keep that in mind! Cloud sync is planned for a future update.
+          You've now got two ways to save progress:
+          <ul className="list-disc list-inside space-y-1.5 ml-2">
+            <li>Create an account (recommended): your collection is saved to your profile, so you can log in on any device and pick up where you left off</li>
+            <li>No account: your progress is saved locally in your browser. This is device-specific - if you clear your browser data, switch browsers, or change device, you'll lose that local progress</li>
+          </ul>
         </p>
+
+        <h2
+          className="text-lg pt-4"
+          style={{
+            fontFamily: "var(--font-display), Impact, sans-serif",
+            textTransform: "uppercase",
+            color: "var(--gold)",
+            textShadow: "1px 1px 0 var(--gold-dark)",
+          }}
+        >
+          Leagues with friends
+        </h2>
+        <p>Want to make it competitive? You can:</p>
+        <ul className="list-disc list-inside space-y-1.5 ml-2">
+          <li><b>Create a league</b> and invite friends to join</li>
+          <li><b>Join an existing league</b></li>
+          <li>Compete to see who can <b>collect the 92 first</b></li>
+        </ul>
 
         <h2
           className="text-lg pt-4"

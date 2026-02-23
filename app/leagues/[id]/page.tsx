@@ -46,7 +46,7 @@ export default function LeagueDetailPage() {
         setError(data.error ?? "Failed to load league");
         return;
       }
-      setLeague(data as LeagueDetail);
+      setLeague({ ...data.league, standings: data.standings } as LeagueDetail);
     } catch {
       setError("Failed to load league");
     } finally {

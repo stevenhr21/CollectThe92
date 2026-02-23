@@ -121,3 +121,33 @@ export const LEAGUE_ORDER: League[] = ["PL", "CH", "L1", "L2"];
 
 export const SLOTS_PER_SPREAD = 8;
 export const SLOTS_PER_PAGE = 4;
+
+/* ------------------------------------------------------------------ */
+/*  Leagues                                                           */
+/* ------------------------------------------------------------------ */
+
+export interface LeagueSummary {
+  id: string;
+  name: string;
+  code: string;
+  memberCount: number;
+  createdBy: string;
+}
+
+export interface LeagueStanding {
+  userId: string;
+  displayName: string;
+  pl: number;
+  ch: number;
+  l1: number;
+  l2: number;
+  total: number;
+}
+
+export interface LeagueDetail {
+  id: string;
+  name: string;
+  code: string;
+  createdBy: string;
+  standings: LeagueStanding[];
+}

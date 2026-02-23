@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
 
@@ -83,6 +84,14 @@ export default function NavAuth() {
             <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Signed in as</p>
             <p className="text-xs text-white/80 mt-0.5 truncate">{user.email}</p>
           </div>
+          <Link
+            href="/leagues"
+            onClick={() => setShowMenu(false)}
+            className="mobile-menu-link cursor-pointer"
+          >
+            My Leagues
+          </Link>
+          <div className="border-t border-white/10" />
           <button
             onClick={() => {
               signOut();

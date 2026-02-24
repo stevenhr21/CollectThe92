@@ -788,13 +788,13 @@ const imageCredits: Record<string, ImageCreditEntry> = {
 
   peterborough: {
     title: "Weston Homes Stadium, Peterborough",
-    authorName: "DBColUtd",
-    authorUrl: "https://en.wikipedia.org/wiki/User:DBColUtd",
+    authorName: "David Hallam-Jones",
+    authorUrl: "https://www.geograph.org.uk/profile/61991",
     sourceName: "Wikimedia Commons",
     sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Weston_Homes_Community_Stadium.jpg",
-    licenseName: "Public Domain",
-    licenseUrl: "Public Domain",
+      "https://commons.wikimedia.org/wiki/File:Football_Club_Stadium,_Peterborough,_Cambs._-_geograph.org.uk_-_6243592.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
     modified: false,
     notes: "Cropped from original",
   },

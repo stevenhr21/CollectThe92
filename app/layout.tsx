@@ -6,6 +6,7 @@ import NavAuth from "@/components/NavAuth";
 import { KofiNavButton } from "@/components/KofiButton";
 import KofiButton from "@/components/KofiButton";
 import Providers from "@/components/Providers";
+import ShieldMark from "@/components/ui/ShieldMark";
 import "./globals.css";
 
 const russoOne = Russo_One({
@@ -36,11 +37,30 @@ export default function RootLayout({
         <Providers>
           {/* Top nav bar – styled like a Merlin album spine */}
           <nav className="sticky top-0 z-40 merlin-nav">
-            <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
-              <Link href="/" className="nav-logo">
-                CollectThe92
+            <div className="max-w-[1500px] mx-auto px-3 sm:px-4 py-2 flex items-center justify-between gap-3">
+              <Link href="/" className="nav-logo flex items-center gap-2 min-w-0">
+                <ShieldMark className="nav-logo-shield" />
+                <span className="truncate">CollectThe92</span>
               </Link>
-              <div className="flex items-center gap-3">
+              <div className="hidden md:flex items-center gap-2">
+                <Link href="/album/PL" className="nav-action">
+                  <svg className="nav-action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 5.5c2.4-.9 4.9-.9 7.5 0v13c-2.6-.9-5.1-.9-7.5 0v-13Z" />
+                    <path d="M12.5 5.5c2.6-.9 5.1-.9 7.5 0v13c-2.4-.9-4.9-.9-7.5 0v-13Z" />
+                  </svg>
+                  My Album
+                </Link>
+                <Link href="/leagues" className="nav-action">
+                  <svg className="nav-action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 19V9" />
+                    <path d="M12 19V5" />
+                    <path d="M19 19v-7" />
+                    <path d="M3.5 19.5h17" />
+                  </svg>
+                  Stats
+                </Link>
+              </div>
+              <div className="flex items-center gap-2 sm:gap-3">
                 <KofiNavButton />
                 <NavAuth />
                 <MobileNav />

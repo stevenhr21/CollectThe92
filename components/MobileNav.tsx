@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 const KOFI_URL = "https://ko-fi.com/F2F71UR8Z1";
 
 const NAV_LINKS = [
+  { href: "/album/PL", label: "My Album" },
+  { href: "/leagues", label: "Stats" },
   { href: "/about", label: "About" },
   { href: "/image-credits", label: "Image Credits" },
 ];
@@ -17,7 +19,8 @@ export default function MobileNav() {
   const pathname = usePathname();
 
   useEffect(() => {
-    setOpen(false);
+    const id = window.setTimeout(() => setOpen(false), 0);
+    return () => window.clearTimeout(id);
   }, [pathname]);
 
   useEffect(() => {

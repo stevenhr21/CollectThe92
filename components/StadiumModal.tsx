@@ -40,7 +40,6 @@ export default function StadiumModal({
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const [showForm, setShowForm] = useState(false);
-  const [justMarkedVisited, setJustMarkedVisited] = useState(false);
 
   useEffect(() => {
     closeButtonRef.current?.focus();
@@ -83,7 +82,6 @@ export default function StadiumModal({
 
   const handleVisitedClick = useCallback(() => {
     onToggle();
-    setJustMarkedVisited(true);
     setShowForm(true);
   }, [onToggle]);
 
@@ -91,14 +89,12 @@ export default function StadiumModal({
     (fixture: FixtureInfo) => {
       onAddFixture(fixture);
       setShowForm(false);
-      setJustMarkedVisited(false);
     },
     [onAddFixture]
   );
 
   const handleCancelForm = useCallback(() => {
     setShowForm(false);
-    setJustMarkedVisited(false);
   }, []);
 
   const meta = LEAGUE_META[stadium.league as League];

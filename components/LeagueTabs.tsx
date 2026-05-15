@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { LEAGUE_META, LEAGUE_ORDER, type League } from "@/lib/types";
-import { THEME_ASSETS } from "@/lib/themeAssets";
 import KeylineFrame from "@/components/ui/KeylineFrame";
 import PrintedMeter from "@/components/ui/PrintedMeter";
 

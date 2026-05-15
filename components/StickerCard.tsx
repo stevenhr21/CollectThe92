@@ -5,24 +5,29 @@ import ImageWithAttribution from "@/components/ImageWithAttribution";
 
 interface StickerCardProps {
   stadium: Stadium;
+  visited?: boolean;
   justPlaced?: boolean;
 }
 
-export default function StickerCard({ stadium, justPlaced }: StickerCardProps) {
+export default function StickerCard({
+  stadium,
+  visited = true,
+  justPlaced,
+}: StickerCardProps) {
   const imageSrc = stadium.image?.src ?? stadium.stickerImage;
   const imageAlt = stadium.image?.alt ?? stadium.stadium;
   const imageCredit = stadium.image?.credit;
 
   return (
     <div
-      className={`sticker-frame relative w-full h-full flex flex-col
+      className={`sticker-frame sticker-card ${visited ? "sticker-card-collected" : "sticker-card-uncollected"} relative w-full h-full flex flex-col
                   ${justPlaced ? "animate-sticker-settle" : ""}`}
     >
       {/* Green halftone gradient interior */}
       <div className="sticker-interior absolute inset-[2px] rounded-[2px]" />
 
       {/* Image area */}
-      <div className="relative z-[1] flex-1 min-h-0 m-[5px] rounded-sm overflow-hidden border-2 border-white/25">
+      <div className="sticker-photo relative z-[1] flex-1 min-h-0 m-[5px] rounded-sm overflow-hidden border-2 border-white/25">
         {/* Placeholder always behind (club initial + silhouette) */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 px-2">
           <svg
@@ -69,26 +74,27 @@ export default function StickerCard({ stadium, justPlaced }: StickerCardProps) {
               "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%)",
           }}
         />
+
+        {!visited && (
+          <div className="sticker-watermark" aria-hidden="true">
+            <span>92</span>
+          </div>
+        )}
       </div>
 
-      {/* Gold nameplate bar */}
+      {/* Printed nameplate bar */}
       <div
-        className="relative z-[1] mx-[5px] mb-[5px] px-2 py-[4px] sm:py-[5px] rounded-sm"
-        style={{
-          background:
-            "linear-gradient(180deg, #FFD700 0%, #DAA520 50%, #B8860B 100%)",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
-        }}
+        className="sticker-caption relative z-[1] mx-[5px] mb-[5px] px-2 py-[4px] sm:py-[5px] rounded-sm"
       >
         <p
-          className="text-[9px] sm:text-[11px] font-extrabold leading-tight truncate uppercase tracking-wide text-center"
-          style={{
-            color: "#1A1714",
-            textShadow: "0 1px 0 rgba(255,255,255,0.3)",
-          }}
+          className="sticker-caption-title text-[9px] sm:text-[11px] font-extrabold leading-tight truncate uppercase tracking-wide"
         >
           {stadium.stadium}
         </p>
+        <div className="sticker-caption-meta">
+          <span className="truncate">{stadium.club}</span>
+          <span className="sticker-caption-badge">92</span>
+        </div>
       </div>
     </div>
   );

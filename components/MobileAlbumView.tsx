@@ -28,25 +28,26 @@ export default function MobileAlbumView({
   const [justPlaced, setJustPlaced] = useState(false);
 
   const stadium = stadiums[index];
-  if (!stadium) return null;
-
-  const visited = isVisited(stadium.id);
   const total = stadiums.length;
+  const visited = stadium ? isVisited(stadium.id) : false;
 
   const goPrev = useCallback(() => setIndex((i) => Math.max(0, i - 1)), []);
   const goNext = useCallback(() => setIndex((i) => Math.min(total - 1, i + 1)), [total]);
 
   const handleToggle = useCallback(() => {
+    if (!stadium) return;
     if (!visited) {
       setJustPlaced(true);
       setTimeout(() => setJustPlaced(false), 450);
     }
     onToggle(stadium.id);
-  }, [visited, onToggle, stadium.id]);
+  }, [visited, onToggle, stadium]);
 
   const handleMarkVisited = useCallback(() => {
     setModalOpen(true);
   }, []);
+
+  if (!stadium) return null;
 
   return (
     <>
@@ -96,7 +97,11 @@ export default function MobileAlbumView({
             className={`w-full h-full transition-all duration-500
                         ${visited ? "sticker-collected" : "sticker-uncollected"}`}
           >
-            <StickerCard stadium={stadium} justPlaced={justPlaced} />
+            <StickerCard
+              stadium={stadium}
+              visited={visited}
+              justPlaced={justPlaced}
+            />
           </div>
 
           {visited && <div className="sticker-shine-overlay" />}

@@ -16,9 +16,11 @@ export default function NavAuth() {
 
   useEffect(() => {
     if (!showMenu) {
-      setConfirmDelete(false);
-      setDeleteError("");
-      return;
+      const id = window.setTimeout(() => {
+        setConfirmDelete(false);
+        setDeleteError("");
+      }, 0);
+      return () => window.clearTimeout(id);
     }
     function handleClickOutside(e: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {

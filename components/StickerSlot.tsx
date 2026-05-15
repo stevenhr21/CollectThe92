@@ -81,7 +81,11 @@ export default function StickerSlot({
                         ${visited ? "sticker-collected" : "sticker-uncollected"}
                         ${visited ? "group-hover:sticker-glow" : "group-hover:brightness-[0.55]"}`}
             >
-              <StickerCard stadium={stadium} justPlaced={justPlaced} />
+              <StickerCard
+                stadium={stadium}
+                visited={visited}
+                justPlaced={justPlaced}
+              />
             </div>
 
             {/* Collected shine overlay */}

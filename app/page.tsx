@@ -7,6 +7,7 @@ import ProgressBar from "@/components/ProgressBar";
 import KeylineFrame from "@/components/ui/KeylineFrame";
 import Plaque from "@/components/ui/Plaque";
 import PremiumButton from "@/components/ui/PremiumButton";
+import ShieldMark from "@/components/ui/ShieldMark";
 import { THEME_ASSETS } from "@/lib/themeAssets";
 
 export default function HomePage() {
@@ -16,11 +17,9 @@ export default function HomePage() {
   return (
     <div className="relative overflow-hidden bg-[var(--bg-deep-charcoal)]">
       <div
-        className="relative papergrain halftone vignette"
+        className="home-album-shell relative papergrain halftone vignette"
         style={{
           minHeight: "calc(100dvh - 52px)",
-          background:
-            "linear-gradient(145deg, var(--album-green-500) 0%, var(--album-green-700) 55%, #10261d 100%)",
           ["--paper-grain-image" as string]: `url(${THEME_ASSETS.hero.paperGrain})`,
           ["--halftone-image" as string]: `url(${THEME_ASSETS.hero.halftone})`,
         }}
@@ -45,10 +44,13 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-10 min-h-[calc(100dvh-52px)] flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 lg:gap-7 items-stretch">
-            <KeylineFrame rounded="lg" padding="lg" cornerTicks className="recessed">
+            <KeylineFrame rounded="lg" padding="lg" cornerTicks className="album-cover-card recessed">
               <div className="h-full flex flex-col justify-between gap-5">
                 <div>
-                  <p className="merlin-subtitle text-white/75 mb-2">The Official</p>
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <p className="merlin-subtitle text-white/75">The Official</p>
+                    <ShieldMark className="cover-shield" />
+                  </div>
                   <h1 className="merlin-title leading-[0.92] text-[2.5rem] sm:text-[3.7rem] lg:text-[4.2rem] uppercase">
                     <span
                       className="block"
@@ -105,9 +107,9 @@ export default function HomePage() {
               </div>
             </KeylineFrame>
 
-            <KeylineFrame rounded="lg" padding="lg" variant="league" cornerTicks className="recessed h-full">
+            <KeylineFrame rounded="lg" padding="lg" variant="league" cornerTicks className="league-picker-card recessed h-full">
               <div className="h-full flex flex-col">
-                <div className="mb-3 sm:mb-4">
+                <div className="mb-3 sm:mb-4 league-picker-heading">
                   <h2 className="merlin-title text-xl sm:text-2xl text-[var(--print-offwhite)]">
                     Choose Your League
                   </h2>

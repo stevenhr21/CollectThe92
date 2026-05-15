@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import Plaque from "@/components/ui/Plaque";
+import ShieldMark from "@/components/ui/ShieldMark";
 
 interface PageProps {
   children: ReactNode;
@@ -28,24 +29,20 @@ export default function Page({
 }: PageProps) {
   return (
     <div
-      className={`album-page papergrain relative flex flex-col min-w-0 h-full
+      className={`album-page album-paper-page papergrain relative flex flex-col min-w-0 h-full
                   ${side === "left" ? "rounded-l-lg" : "rounded-r-lg"}`}
       style={{
-        background: `linear-gradient(135deg, ${pageColorLight} 0%, ${pageColor} 40%, ${pageColor} 100%)`,
+        ["--page-accent" as string]: pageColor,
+        ["--page-accent-light" as string]: pageColorLight,
         boxShadow:
           side === "left"
-            ? "inset -6px 0 18px -4px rgba(0,0,0,0.35), inset 0 0 30px rgba(0,0,0,0.1)"
-            : "inset 6px 0 18px -4px rgba(0,0,0,0.35), inset 0 0 30px rgba(0,0,0,0.1)",
+            ? "inset -16px 0 24px -18px rgba(0,0,0,0.55), inset 0 0 38px rgba(96,67,25,0.14)"
+            : "inset 16px 0 24px -18px rgba(0,0,0,0.55), inset 0 0 38px rgba(96,67,25,0.14)",
       }}
     >
       {/* Stitch border */}
       <div
-        className="absolute pointer-events-none z-[3]"
-        style={{
-          inset: "5px",
-          border: "2px dashed rgba(255,255,255,0.13)",
-          borderRadius: "3px",
-        }}
+        className="album-page-keyline absolute pointer-events-none z-[3]"
       />
 
       {/* Corner flourishes */}
@@ -76,14 +73,19 @@ export default function Page({
       {/* Top: league label */}
       <div className="relative z-[5] px-2.5 sm:px-3 lg:px-4 pt-1.5 flex-shrink-0">
         <div className="album-page-header">
-          <div>
-            <p className="album-page-header-title">{leagueName || "Album"}</p>
-            <p className="album-page-header-meta">
-              Spread {spreadNumber} - {visitedCount}/{totalCount} collected
-            </p>
+          <div className="flex items-center gap-2 min-w-0">
+            <ShieldMark className="page-shield" />
+            <div className="min-w-0">
+              <p className="album-page-header-title truncate">
+                {leagueName || "Album"}
+              </p>
+              <p className="album-page-header-meta">
+                Spread {spreadNumber} - {visitedCount}/{totalCount} collected
+              </p>
+            </div>
           </div>
-          <Plaque className="text-[8px] px-2 py-0.5 bg-black/30 border-white/35 text-white/80">
-            Official Sticker Collection
+          <Plaque className="page-edition-plaque text-[8px] px-2 py-0.5">
+            2025/26
           </Plaque>
         </div>
       </div>

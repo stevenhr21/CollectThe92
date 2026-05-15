@@ -37,7 +37,7 @@ export default function AlbumSpread({
   const rightPage = stadiums.slice(SLOTS_PER_PAGE);
 
   const renderSlots = (items: Stadium[], offset: number) => (
-    <div className="grid grid-cols-2 grid-rows-2 gap-x-2.5 gap-y-2 sm:gap-x-3 sm:gap-y-2.5 h-full">
+    <div className="sticker-grid grid grid-cols-2 grid-rows-2 gap-x-2.5 gap-y-2 sm:gap-x-3 sm:gap-y-2.5 h-full">
       {items.map((stadium, i) => (
         <StickerSlot
           key={stadium.id}
@@ -54,20 +54,16 @@ export default function AlbumSpread({
       {Array.from({ length: SLOTS_PER_PAGE - items.length }).map((_, i) => (
         <div key={`empty-${i}`} className="flex flex-col min-h-0">
           <div
-            className="slot-shell slot-shell-empty-guide relative flex-1 min-h-0 rounded-md flex items-center justify-center"
-            style={{
-              border: "1px dashed rgba(255,255,255,0.22)",
-              background: "rgba(0,0,0,0.18)",
-            }}
+            className="slot-shell slot-shell-empty-guide empty-special-slot relative flex-1 min-h-0 rounded-md flex items-center justify-center"
           >
             <span
               className="text-xl"
-              style={{ color: "rgba(218,165,32,0.2)" }}
+              style={{ color: "rgba(74,20,140,0.18)" }}
             >
               ★
             </span>
           </div>
-          <div className="sticker-info-box mt-1.5" style={{ opacity: 0.3 }}>
+          <div className="sticker-info-box mt-1.5" style={{ opacity: 0.45 }}>
             <p
               className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-center"
               style={{ color: "rgba(255,255,255,0.3)" }}
@@ -84,7 +80,7 @@ export default function AlbumSpread({
   const rightPageNum = spreadNumber * 2 + 2;
 
   return (
-    <div className="flex flex-col md:flex-row gap-0 w-full h-full">
+    <div className="open-album-spread flex flex-col md:flex-row gap-0 w-full h-full">
       {/* Left page */}
       <div className="flex-1 min-w-0 md:min-h-0">
         <Page

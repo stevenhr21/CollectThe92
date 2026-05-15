@@ -51,13 +51,11 @@ export default function AboutPage() {
         >
           Accounts, syncing and local mode
         </h2>
-        <p>
-          You've now got two ways to save progress:
-          <ul className="list-disc list-inside space-y-1.5 ml-2">
-            <li>Create an account (recommended): your collection is saved to your profile, so you can log in on any device and pick up where you left off</li>
-            <li>No account: your progress is saved locally in your browser. This is device-specific - if you clear your browser data, switch browsers, or change device, you'll lose that local progress</li>
-          </ul>
-        </p>
+        <p>You&apos;ve now got two ways to save progress:</p>
+        <ul className="list-disc list-inside space-y-1.5 ml-2">
+          <li>Create an account (recommended): your collection is saved to your profile, so you can log in on any device and pick up where you left off</li>
+          <li>No account: your progress is saved locally in your browser. This is device-specific - if you clear your browser data, switch browsers, or change device, you&apos;ll lose that local progress</li>
+        </ul>
 
         <h2
           className="text-lg pt-4"
